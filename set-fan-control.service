@@ -1,0 +1,11 @@
+[Unit]
+Description=fan-control
+After=systemd-modules-load.target
+
+[Service]
+ExecStart=/usr/local/bin/set-fan-control
+RemainAfterExit=true
+Type=oneshot
+
+[Install]
+WantedBy=multi-user.target

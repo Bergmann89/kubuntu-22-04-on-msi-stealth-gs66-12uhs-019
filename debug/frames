@@ -1,0 +1,21 @@
+| op code (set key code)
+|  | ?
+|  |  | region
+|  |  |  ?
+|  |  |  |
+0e 00 18 00
+    | primary color
+    |        secondary color
+    |        |
+    |        |        time in 10ms
+    |        |        |     ??
+    |        |        |     |  mode
+    |        |        |     |  |  ??   
+    |        |        |     |  |  |  key code 
+    |        |        |     |  |  |  | 
+    00 00 00 00 00 00 64 00 00 01 00 29     // set static (00 00 00)
+    ff ff ff 00 00 00 64 00 00 01 00 29     // set static (ff ff ff)
+    78 9a bc 12 34 56 64 00 00 08 00 29     // set responsive fade-of (passive color 78 9a bc, active color 12 34 56)
+    56 78 ef fe 12 34 64 00 00 08 00 29     // set responsive fade-of (passive color 56 78 ef, active color fe 12 34,  100 * 10 msec)
+    56 78 ef fe 12 34 2f 02 00 08 00 29     // set responsive fade-of (passive color 56 78 ef, active color fe 12 34,  559 * 10 msec)
+    56 78 ef fe 12 34 e8 03 00 08 00 29     // set responsive fade-of (passive color 56 78 ef, active color fe 12 34, 1000 * 10 msec)

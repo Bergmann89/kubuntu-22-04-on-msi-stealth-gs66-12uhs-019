@@ -1,0 +1,24 @@
+Temperature CPU             0x68    direct access
+Temperature GPU             0x80    direct access
+
+Battery Threshold           0xD7    128 + (0 to 100)
+Battery Charging Status     0x31    enum (1 not charging, 3 charging, 5 discharging, 9 fully charged, 13 fully charged - no power)
+
+# Keyboard Backlight Mode     0x2C    enum (0 always on, 8 auto turn off)
+Keyboard Backlight          0xD3    enum (0 off, 1 low, 2 mid, 3 high)
+
+Fan 1                       0xC9    470000 / x
+Fan 2                       0xCB    470000 / x
+Fan 3                       0xCD    470000 / x
+
+Fan 1 Speed Start           0x71    direct access (in %)    0x71 is special value?!
+Fan 1 Temp Start            0x6A    direct access (in °C)
+Fan 1 Speed Count           7
+
+Fan 2 Speed Start           0x89    direct access (in %)    0x89 is special value?!
+Fan 2 Temp Start            0x82    direct access (in °C)
+Fan 2 Speed Count           7
+
+Fan Mode                    0xD4    enum (0x0D auto, 0x1D silent, 0x4D basic, 0x8D advanced)
+
+Shift Mode                  0xD2    enum (0xC1 Smart Auto, )
